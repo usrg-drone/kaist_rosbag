@@ -1,28 +1,35 @@
-rosbag record --split --size=500 -b 3000 \
-/os_cloud_node/points \
-/scout/mavros/imu/data \
-/BLIO/odom_gicp_global_prediction \
-/BLIO/Globalmap \
-/BLIO/Localmap \
-/BLIO/Keyframe \
-/BLIO/KNN_Keyframe \
-/BLIO/KNN_Keyframe_map \
-/BLIO/Keyframe_map_align \
-/scout/mavros/vision_pose/pose \
-/scout/mavros/local_position/pose \
-/scout/mavros/setpoint_velocity/cmd_vel \
-/scout/mavros/local_position/velocity_local \
-/scout/global_goal \
-/scout/local_goal \
-/scout/map \
-/scout/map_distance \
-/scout/map_check \
-/tf \
-/usb_cam/image_raw/compressed \
-/scout/astar_path_vis \
-/scout/marker_target \
-/scout/astar_path \
-/GoalAction \
-/GoalPoint \
-/Mission \
-/scout/mavros/state
+#!/bin/bash
+source /opt/ros/galactic/setup.bash
+source ~/glim_ws/install/setup.bash
+echo "Starting rosbag record..."
+
+DIR_NAME=$(date "+%Y-%m-%d_%H-%M-%S")
+OUTPUT_DIR=~/glim_ws/bags/$DIR_NAME
+
+echo "Saving bag file in: $OUTPUT_DIR"
+ros2 bag record -o "$OUTPUT_DIR" \
+/mavros/state \
+/livox/lidar \
+/livox/imu \
+/glim_ros/aligned_points \
+/glim_ros/map \
+/glim_ros/odom \
+/glim_ros/points \
+/glim_ros/pose \
+/mavros/local_position/accel \
+/mavros/local_position/odom \
+/mavros/local_position/pose \
+/mavros/imu/data \
+/mavros/setpoint_velocity/cmd_vel \
+/mavros/local_position/velocity_local \
+/mavros/setpoint_raw/attitude \
+/mavros/setpoint_raw/global \
+/mavros/setpoint_raw/local \
+/mavros/setpoint_raw/target_attitude \
+/mavros/setpoint_raw/target_global \
+/mavros/setpoint_raw/target_local
+
+
+
+
+
