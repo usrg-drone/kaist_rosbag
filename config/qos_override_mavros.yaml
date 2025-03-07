@@ -1,0 +1,6 @@
+/mavros/local_position/pose:
+  reliability: best_effort
+  history: keep_all
+/mavros/imu/data:
+  reliability: best_effort
+  history: keep_all
