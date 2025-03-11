@@ -13,7 +13,7 @@ ros2 bag record -o "$OUTPUT_DIR" \
 /mavros/state \
 /livox/lidar \
 /livox/imu \
-/glim_ros/aligned_points \
+/glim_ros/aligned_points_corrected \
 /glim_ros/map \
 /glim_ros/odom \
 /glim_ros/points \
@@ -29,7 +29,8 @@ ros2 bag record -o "$OUTPUT_DIR" \
 /mavros/setpoint_raw/local \
 /mavros/setpoint_raw/target_attitude \
 /mavros/setpoint_raw/target_global \
-/mavros/setpoint_raw/target_local
+/mavros/setpoint_raw/target_local \
+/tf
 
 
 
