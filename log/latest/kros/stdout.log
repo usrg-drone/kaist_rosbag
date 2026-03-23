@@ -1,0 +1,23 @@
+running egg_info
+writing build/kros/kros.egg-info/PKG-INFO
+writing dependency_links to build/kros/kros.egg-info/dependency_links.txt
+writing entry points to build/kros/kros.egg-info/entry_points.txt
+writing requirements to build/kros/kros.egg-info/requires.txt
+writing top-level names to build/kros/kros.egg-info/top_level.txt
+reading manifest file 'build/kros/kros.egg-info/SOURCES.txt'
+writing manifest file 'build/kros/kros.egg-info/SOURCES.txt'
+running build
+running build_py
+copying kros/kros2.py -> /home/cho/ros2_ws/src/kros/build/kros/build/lib/kros
+running install
+running install_lib
+copying /home/cho/ros2_ws/src/kros/build/kros/build/lib/kros/kros2.py -> /home/cho/ros2_ws/src/kros/install/kros/lib/python3.10/site-packages/kros
+byte-compiling /home/cho/ros2_ws/src/kros/install/kros/lib/python3.10/site-packages/kros/kros2.py to kros2.cpython-310.pyc
+running install_data
+copying config/kros2.sh -> /home/cho/ros2_ws/src/kros/install/kros/share/kros/config
+running install_egg_info
+removing '/home/cho/ros2_ws/src/kros/install/kros/lib/python3.10/site-packages/kros-0.0.0-py3.10.egg-info' (and everything under it)
+Copying build/kros/kros.egg-info to /home/cho/ros2_ws/src/kros/install/kros/lib/python3.10/site-packages/kros-0.0.0-py3.10.egg-info
+running install_scripts
+Installing kros2 script to /home/cho/ros2_ws/src/kros/install/kros/lib/kros
+writing list of installed files to '/home/cho/ros2_ws/src/kros/build/kros/install.log'
