@@ -1,0 +1,25 @@
+[0.625s] Invoking command in '/home/cho/ros2_ws/src/kros': PYTHONPATH=/home/cho/ros2_ws/src/kros/build/kros/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/cho/ros2_ws/src/kros/install/kros/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/kros build --build-base /home/cho/ros2_ws/src/kros/build/kros/build install --record /home/cho/ros2_ws/src/kros/build/kros/install.log --single-version-externally-managed install_data
+[0.839s] running egg_info
+[0.839s] writing build/kros/kros.egg-info/PKG-INFO
+[0.845s] writing dependency_links to build/kros/kros.egg-info/dependency_links.txt
+[0.845s] writing entry points to build/kros/kros.egg-info/entry_points.txt
+[0.845s] writing requirements to build/kros/kros.egg-info/requires.txt
+[0.845s] writing top-level names to build/kros/kros.egg-info/top_level.txt
+[0.847s] reading manifest file 'build/kros/kros.egg-info/SOURCES.txt'
+[0.848s] writing manifest file 'build/kros/kros.egg-info/SOURCES.txt'
+[0.848s] running build
+[0.848s] running build_py
+[0.849s] copying kros/kros2.py -> /home/cho/ros2_ws/src/kros/build/kros/build/lib/kros
+[0.849s] running install
+[0.849s] running install_lib
+[0.850s] copying /home/cho/ros2_ws/src/kros/build/kros/build/lib/kros/kros2.py -> /home/cho/ros2_ws/src/kros/install/kros/lib/python3.10/site-packages/kros
+[0.851s] byte-compiling /home/cho/ros2_ws/src/kros/install/kros/lib/python3.10/site-packages/kros/kros2.py to kros2.cpython-310.pyc
+[0.852s] running install_data
+[0.853s] copying config/kros2.sh -> /home/cho/ros2_ws/src/kros/install/kros/share/kros/config
+[0.853s] running install_egg_info
+[0.855s] removing '/home/cho/ros2_ws/src/kros/install/kros/lib/python3.10/site-packages/kros-0.0.0-py3.10.egg-info' (and everything under it)
+[0.855s] Copying build/kros/kros.egg-info to /home/cho/ros2_ws/src/kros/install/kros/lib/python3.10/site-packages/kros-0.0.0-py3.10.egg-info
+[0.856s] running install_scripts
+[0.873s] Installing kros2 script to /home/cho/ros2_ws/src/kros/install/kros/lib/kros
+[0.873s] writing list of installed files to '/home/cho/ros2_ws/src/kros/build/kros/install.log'
+[0.891s] Invoked command in '/home/cho/ros2_ws/src/kros' returned '0': PYTHONPATH=/home/cho/ros2_ws/src/kros/build/kros/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/cho/ros2_ws/src/kros/install/kros/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/kros build --build-base /home/cho/ros2_ws/src/kros/build/kros/build install --record /home/cho/ros2_ws/src/kros/build/kros/install.log --single-version-externally-managed install_data

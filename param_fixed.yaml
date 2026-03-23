@@ -1,0 +1,120 @@
+camera:
+  ros__parameters:
+
+    fisheye1:
+      image_raw:
+        compressed:
+          enable: true
+          format: jpeg
+          jpeg_optimize: false
+          jpeg_progressive: false
+          jpeg_quality: 80
+          jpeg_restart_interval: 0
+          png_level: 9
+        compressedDepth:
+          enable: true
+          format: png
+          depth_max: 10.0
+          depth_quantization: 100.0
+          png_level: 1
+        theora:
+          enable: true
+          keyframe_frequency: 64
+          optimize_for: 1
+          quality: 31
+          target_bitrate: 800000
+
+    fisheye2:
+      image_raw:
+        compressed:
+          enable: true
+          format: jpeg
+          jpeg_optimize: false
+          jpeg_progressive: false
+          jpeg_quality: 80
+          jpeg_restart_interval: 0
+          png_level: 9
+        compressedDepth:
+          enable: true
+          format: png
+          depth_max: 10.0
+          depth_quantization: 100.0
+          png_level: 1
+        theora:
+          enable: true
+          keyframe_frequency: 64
+          optimize_for: 1
+          quality: 31
+          target_bitrate: 800000
+
+
+realsense2_camera:
+  ros__parameters:
+
+    device_type: t265
+
+    color_fps: 30
+    color_width: 640
+    color_height: 480
+
+    depth_fps: 30
+    depth_width: 640
+    depth_height: 480
+
+    confidence_fps: 30
+    confidence_width: 640
+    confidence_height: 480
+
+    enable_pose: true
+    enable_color: true
+    enable_depth: true
+    enable_accel: true
+    enable_gyro: true
+
+    enable_fisheye1: true
+    enable_fisheye2: true
+    enable_fisheye: false
+
+    enable_infra: false
+    enable_infra1: false
+    enable_infra2: false
+
+    enable_pointcloud: false
+    enable_sync: false
+
+    align_depth: false
+
+    base_frame_id: camera_link
+    pose_frame_id: camera_pose_frame
+    pose_optical_frame_id: camera_pose_optical_frame
+
+    odom_frame_id: camera_odom_frame
+
+    publish_tf: true
+    publish_odom_tf: true
+
+    tf_publish_rate: 0.0
+
+    linear_accel_cov: 0.01
+
+    reconnect_timeout: 6.0
+
+    wait_for_device_timeout: -1.0
+
+
+odometry_republisher:
+  ros__parameters:
+
+    topics:
+      odom_in: /camera/odom/sample
+      pose_out: mavros/vision_pose/pose
+
+    transforms:
+
+      base_link_to_camera_base:
+        base_link_name: base_link
+        xyz_m: [0.0, 0.0, 0.1]
+        rpy_deg: [0.0, 30.0, 0.0]
+
+      camera_base_to_camera_image:
+        rpy_ori: FLU
