@@ -1,0 +1,19 @@
+/mavros/local_position/pose:
+  reliability: best_effort
+  history: keep_all
+  
+/mavros/imu/data:
+  reliability: best_effort
+  history: keep_all
+  
+/camera/color/image_raw:
+  reliability: reliable
+  durability: volatile
+  history: keep_last
+  depth: 60
+  
+/camera/color/camera_info:
+  reliability: best_effort
+  durability: volatile
+  history: keep_last
+  depth: 60
