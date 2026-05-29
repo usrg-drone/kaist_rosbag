@@ -8,7 +8,7 @@ from launch.substitutions import LaunchConfiguration
 
 def generate_launch_description():
     return LaunchDescription([
-        DeclareLaunchArgument('record_script', default_value=os.path.expanduser('~/glim_ws/src/kaist_rosbag/config/record_topics.sh'),
+        DeclareLaunchArgument('record_script', default_value='record_topics.sh',
                               description='Shell script to start rosbag recording'),
         DeclareLaunchArgument('trigger_topic_name', default_value='/mavros/state',
                               description='Topic to trigger recording'),

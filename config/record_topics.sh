@@ -1,6 +1,4 @@
 #!/bin/bash
-source /opt/ros/galactic/setup.bash
-source ~/glim_ws/install/setup.bash
 echo "Starting rosbag record..."
 
 DIR_NAME=$(date "+%Y-%m-%d_%H-%M-%S")
@@ -11,11 +9,6 @@ ros2 bag record -o "$OUTPUT_DIR" \
 /mavros/state \
 /livox/lidar \
 /livox/imu \
-/glim_ros/aligned_points \
-/glim_ros/map \
-/glim_ros/odom \
-/glim_ros/points \
-/glim_ros/pose \
 /mavros/local_position/accel \
 /mavros/local_position/odom \
 /mavros/local_position/pose \
@@ -28,8 +21,3 @@ ros2 bag record -o "$OUTPUT_DIR" \
 /mavros/setpoint_raw/target_attitude \
 /mavros/setpoint_raw/target_global \
 /mavros/setpoint_raw/target_local
-
-
-
-
-
