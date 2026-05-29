@@ -1,6 +1,6 @@
-from setuptools import setup
-import os 
 from glob import glob
+
+from setuptools import setup
 
 package_name = 'kaist_rosbag'
 
@@ -9,19 +9,25 @@ setup(
     version='0.0.0',
     packages=[package_name],
     data_files=[
-        ('share/' + package_name + '/config', ['config/record_topics.sh']),
-        ('share/' + package_name + '/launch', ['launch/rosbag_trigger.launch.py'])
+        (
+            'share/ament_index/resource_index/packages',
+            ['resource/' + package_name],
+        ),
+        ('share/' + package_name, ['package.xml']),
+        ('share/' + package_name + '/config', glob('config/*')),
+        ('share/' + package_name + '/launch', glob('launch/*.launch.py')),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
     maintainer='usrg',
-    maintainer_email='jeinking@kaist.ac.kr',
+    maintainer_email='donghun.han@kaist.ac.kr',
     description='ROS 2 package for triggered bag recording',
     license='TODO: License declaration',
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'rosbag_trigger = kaist_rosbag.rosbag_trigger:main'
+            'rosbag_trigger = kaist_rosbag.rosbag_trigger:main',
+            'rosbag_recorder = kaist_rosbag.rosbag_recorder:main',
         ],
     },
 )
