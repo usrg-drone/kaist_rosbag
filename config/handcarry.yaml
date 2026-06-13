@@ -1,0 +1,17 @@
+trigger:
+  mode: "handcarry"
+
+save_dir: "handcarry"
+
+mcap_qos: "mcap_qos.yaml"
+
+args:
+  - -b
+  - 1000000000          # ~1GB per file
+  - --max-cache-size
+  - 50000000            # 50MB buffer (memory saving)
+
+topics:
+  - /recording_status
+  - /mavros/state
+  - /mavros/rc/in
