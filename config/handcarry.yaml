@@ -7,11 +7,29 @@ mcap_qos: "mcap_qos.yaml"
 
 args:
   - -b
-  - 1000000000          # ~1GB per file
+  - 4000000000          # ~1GB per file
   - --max-cache-size
   - 50000000            # 50MB buffer (memory saving)
 
 topics:
   - /recording_status
-  - /mavros/state
-  - /mavros/rc/in
+  - /rc/in
+  - /battery
+  - /camera/camera_info
+  - /camera/image_raw
+  - /camera/landmark_updates
+  - /extrinsics_rotation
+  - /extrinsics_rotation_rpy
+  - /fcu/imu/data_raw
+  - /gate_corner_lines
+  - /gate_detection/detections
+  - /gate_viz
+  - /motors
+  - /motors/override
+  - /motors/rpm
+  - /odometry
+  - /rc/override
+  - /reproj_debug
+  - /tf
+
+  

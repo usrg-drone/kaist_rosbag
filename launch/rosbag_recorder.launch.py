@@ -7,7 +7,7 @@ from launch_ros.actions import Node
 def generate_launch_description():
     config_file_arg = DeclareLaunchArgument(
         "config_file",
-        default_value="handcarry.yaml",
+        default_value="rc.yaml",
     )
 
     recorder_node = Node(

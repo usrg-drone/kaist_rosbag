@@ -1,8 +1,8 @@
 trigger:
   mode: "rc"
-  rc_topic: "/mavros/rc/in"
-  rc_trigger_channel: 5
-  rc_trigger_threshold: 1700
+  rc_topic: "/rc/in"
+  rc_trigger_channel: 7
+  rc_trigger_threshold: 1800
 
 save_dir: "rc"
 
@@ -10,11 +10,28 @@ mcap_qos: "mcap_qos.yaml"
 
 args:
   - -b
-  - 1000000000          # ~1GB per file
+  - 4000000000          # ~4GB per file
   - --max-cache-size
   - 50000000            # 50MB buffer (memory saving)
 
 topics:
   - /recording_status
-  - /mavros/state
-  - /mavros/rc/in
+  - /rc/in
+  - /battery
+  - /camera/camera_info
+  - /camera/image_raw
+  - /camera/landmark_updates
+  - /extrinsics_rotation
+  - /extrinsics_rotation_rpy
+  - /fcu/imu/data_raw
+  - /gate_corner_lines
+  - /gate_detection/detections
+  - /gate_viz
+  - /motors
+  - /motors/override
+  - /motors/rpm
+  - /odometry
+  - /rc/override
+  - /reproj_debug
+  - /tf
+  - /current_gate
